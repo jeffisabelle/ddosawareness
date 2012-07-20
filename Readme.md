@@ -7,6 +7,13 @@ The extension has the ability of limiting HTTP Requests per destination per seco
 
 It is developed for ddosmitigator.com which is a Labris Teknoloji project. 
 
+## install
+You can simply click below within firefox to install the extension to your browser;
+http://muhammetcan.net/labris/ddosawareness/ddosawareness.xpi
+
+You can get more information about the extension from here;
+http://muhammetcan.net/labris/ddosawareness/
+
 ## screenshots
 
 ![settings](http://muhammetcan.net/labris/ddosawareness/images/ss1.png)
@@ -14,3 +21,5 @@ It is developed for ddosmitigator.com which is a Labris Teknoloji project.
 ![whitelist](http://muhammetcan.net/labris/ddosawareness/images/ss2.png)
 
 ![alerts](http://muhammetcan.net/labris/ddosawareness/images/ss3.png)
+
+## license
