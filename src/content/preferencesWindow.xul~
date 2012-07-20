@@ -1,0 +1,177 @@
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://ddospreventer-os/skin/prefwindow.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM
+  "chrome://ddospreventer/locale/browserOverlay.dtd">
+
+<prefwindow id="ddosawarenessPrefWindow" title="DDoS Awereness Preferences"
+  type="prefwindow" windowtype="requestpolicy:pref"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+    <prefpane id="general-settings" label="Settings"
+    image="chrome://ddospreventer/skin/prefsettings.png">
+        <preferences>
+  	  <preference id="allowed-connection"
+ 	     name="extensions.ddospreventer.allowed.connection" type="int" />
+  	      <!-- More preference elements. -->
+
+	</preferences>
+	<hbox>
+	  <vbox align="center">
+            <groupbox>    
+              <image src="chrome://ddospreventer/skin/ddos-aw.png"/>
+            </groupbox>
+	 <label class="text-link" value="DDoS Awareness"
+           onclick="var win = Components.classes['@mozilla.org/appshell/window-mediator;1']
+            .getService(Components.interfaces.nsIWindowMediator)
+            .getMostRecentWindow('navigator:browser');
+            win.gBrowser.selectedTab = win.gBrowser.addTab('http://www.ddosmitigator.com/firefoxextension/');"/>
+            
+ 	  </vbox>
+          <groupbox flex="1">  
+	    <description>
+	      <html:br/>  
+	      Allowed cross-site requests to 
+	      one destination per second.
+	    </description>  
+            <textbox preference="allowed-connection" value="25" type="number" min="1" max="250"/> 
+    	    <html:br/>
+	    <description>
+		*DDoS Awareness will cache your requests for 5 seconds. So if you set this value to x, your browser 
+		will be able to send maximum 5x requests for 5 seconds to one destination. 
+	    </description>
+          </groupbox>
+        </hbox>     
+    </prefpane>
+
+    <prefpane id="whitelist" label="Whitelist"
+    image="chrome://ddospreventer/skin/prefwhitelist.png">
+      <preferences>
+        <preference id="pref-uriIdentificationLevel"
+          name="extensions.requestpolicy.uriIdentificationLevel" type="int" />
+      </preferences>
+	<hbox>
+	  <vbox align="center">
+            <groupbox>    
+              <image src="chrome://ddospreventer/skin/ddos-aw.png"/>
+            </groupbox>
+	 <label class="text-link" value="DDoS Awareness"
+           onclick="var win = Components.classes['@mozilla.org/appshell/window-mediator;1']
+            .getService(Components.interfaces.nsIWindowMediator)
+            .getMostRecentWindow('navigator:browser');
+            win.gBrowser.selectedTab = win.gBrowser.addTab('http://www.ddosmitigator.com/firefoxextension/');"/>
+ 	  </vbox>
+
+          <groupbox flex="1">   
+    	    <listbox id="originsList" flex="1" 
+	      onselect="ddosawareness.prefWindow.listSelectionChanged(this)"
+              onkeyup="if(event.keyCode==event.DOM_VK_DELETE) ddosawareness.prefWindow.removeSelectedFromList(this);"
+              key="select-all-key">
+              <listhead>
+                <listheader label="Whitelisted Origins" />
+              </listhead>
+		<!--	      
+               <listcols>
+                <listcol flex="1" id="whitelistedOriginsColumn" />
+              </listcols>
+		-->
+              
+	    </listbox>
+ 	    <hbox>
+              <button id="removeOrigin" label="Remove From Whitelist"
+                oncommand="ddosawareness.prefWindow.removeSelectedFromList(this.listbox)"
+                disabled="true" />
+            </hbox>
+            <hbox>
+              <textbox id="addOrigin-originField"
+                oninput="ddosawareness.prefWindow.addToWhitelistInputChanged(this)"
+                flex="1"
+                onkeydown="if(event.keyCode==event.DOM_VK_ENTER || event.keyCode==event.DOM_VK_RETURN) { ddosawareness.prefWindow.addToWhitelist(this.button); return false; }" />
+              <button id="addOrigin" label="Add To Whitelist"
+                oncommand="ddosawareness.prefWindow.addToWhitelist(this)"
+                disabled="true" />
+            </hbox>
+            
+          </groupbox>
+        </hbox>
+    </prefpane>
+
+    <prefpane id="about" label="About"
+    image="chrome://ddospreventer/skin/prefabout.png">
+      <preferences>
+        <preference id="pref-uriIdentificationLevel"
+          name="extensions.requestpolicy.uriIdentificationLevel" type="int" />
+      </preferences>
+	<hbox>
+	  <vbox align="center">
+            <groupbox>    
+              <image src="chrome://ddospreventer/skin/ddos-aw.png"/>
+            </groupbox>
+	 <label class="text-link" value="DDoS Awareness"
+           onclick="var win = Components.classes['@mozilla.org/appshell/window-mediator;1']
+            .getService(Components.interfaces.nsIWindowMediator)
+            .getMostRecentWindow('navigator:browser');
+            win.gBrowser.selectedTab = win.gBrowser.addTab('http://www.ddosmitigator.com/firefoxextension/');"/>
+            
+ 	  </vbox>
+	  
+          <groupbox flex="1"> 
+	  <description flex="1">
+	    <html:br/>
+  	    This extension is a sample extension for limiting
+ 	    HTTP Requests per destination per second.
+	    This pluging is developed by ddosmitigator.com
+            which is a Labris Teknoloji project.<html:br/><html:br/>
+
+  	    Plugin Homepage: <html:br/>
+	    	 <label class="text-link" value="DDoS Awareness"
+           onclick="var win = Components.classes['@mozilla.org/appshell/window-mediator;1']
+            .getService(Components.interfaces.nsIWindowMediator)
+            .getMostRecentWindow('navigator:browser');
+            win.gBrowser.selectedTab = win.gBrowser.addTab('http://www.ddosmitigator.com/firefoxextension/');"/>
+	  </description>
+          </groupbox>
+        </hbox>
+    </prefpane>
+
+    <prefpane id="licence" label="Licence"
+    image="chrome://ddospreventer/skin/preflicense.png">
+      <preferences>
+        <preference id="pref-uriIdentificationLevel"
+          name="extensions.requestpolicy.uriIdentificationLevel" type="int" />
+      </preferences>
+	<hbox>
+	  <vbox align="center">
+            <groupbox>    
+              <image src="chrome://ddospreventer/skin/ddos-aw.png"/>
+            </groupbox>
+
+            	 <label class="text-link" value="DDoS Awareness"
+           onclick="var win = Components.classes['@mozilla.org/appshell/window-mediator;1']
+            .getService(Components.interfaces.nsIWindowMediator)
+            .getMostRecentWindow('navigator:browser');
+            win.gBrowser.selectedTab = win.gBrowser.addTab('http://www.ddosmitigator.com/firefoxextension/');"/>
+ 	  </vbox>
+          <groupbox flex="1">   
+
+	  <description flex="1">
+	    <html:br/>
+	    This plugin is an open software licensed with 4 clause BSD license: <html:br/>
+	    Copyright (c) 2012, Labris Teknoloji <html:br/>
+ 	    All rights reserved.<html:br/><html:br/>
+
+ 	    You have received a copy of the License
+    	    along with this extension; you can have a look at
+ 	    from here: <html:br/>
+            <button id="license" label="Show License"
+                oncommand="ddosawareness.prefWindow.openLicense()"/>
+
+	  </description>
+
+          </groupbox>
+        </hbox>
+    </prefpane>
+
+    <script type="application/x-javascript"
+      src="chrome://ddospreventer/content/preferencesWindow.js" />
+</prefwindow>

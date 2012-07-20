@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/css" 
+  href="chrome://global/skin/" ?>
+<?xml-stylesheet type="text/css"
+  href="chrome://ddospreventer-os/skin/browserOverlay.css" ?>
+<?xml-stylesheet type="text/css"
+  href="chrome://ddospreventer-os/skin/toolbar.css" ?>
+
+<!DOCTYPE overlay SYSTEM
+  "chrome://ddospreventer/locale/browserOverlay.dtd">
+
+
+<overlay id="ddospreventer-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript"
+    src="chrome://ddospreventer/content/browserOverlay.js" />
+  
+  <menupopup id="menu_ToolsPopup">
+    <menu id="ddospreventer-menu" label="DDoS Awareness"
+      insertbefore="devToolsEndSeparator">
+      <menupopup>
+        <menuitem id="ddospreventer-menu-item"
+          label="Preferences"
+          oncommand="ddosawareness.BrowserOverlay.openPreferences(event);" />
+      </menupopup>
+    </menu>
+  </menupopup>
+
+  <vbox id="appmenuSecondaryPane">
+    <menu id="ddospreventer-menu-2" label="DDoS Awareness"
+      insertafter="appmenu_addons">
+      <menupopup>
+        <menuitem id="ddospreventer-menu-item-2"
+          label="Preferences"
+          oncommand="ddosawareness.BrowserOverlay.openPreferences(event);" />
+      </menupopup>
+    </menu>
+  </vbox>
+  
+
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="ddospreventer-button" 
+      label="DDoS Awareness" 
+      tooltiptext="DDoS Awareness" 
+      oncommand="ddosawareness.BrowserOverlay.openPreferences(event);"/>
+  </toolbarpalette>
+  
+</overlay>
+

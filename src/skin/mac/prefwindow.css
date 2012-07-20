@@ -1,0 +1,6 @@
+prefwindow {
+  /* Must be wide enough to accommodate locales with long translations of General pane labels. */
+  width: 45em;
+  height: 25em;  
+}
+

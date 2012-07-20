@@ -1,0 +1,10 @@
+<!ENTITY ddospreventer.label            "DDos Awareness">
+<!ENTITY ddospreventer.menu.accesskey    "d">
+<!ENTITY ddospreventer.item.accesskey    "D">
+
+
+<!ENTITY ddospreventer.msgfirst		"Allowed Cross-Site Request to">
+<!ENTITY ddospreventer.msgsecond	"one destination per second?">
+
+<!ENTITY ddospreventer.buttonsave	"Save">
+<!ENTITY ddospreventer.buttoncancel	"Cancel">

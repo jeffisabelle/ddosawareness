@@ -1,0 +1,38 @@
+2012-03-15  Labris Teknoloji  <info@labristeknoloji.com>
+
+	* textlinks now opens new in new tabs
+	* bugs removed from `why blocked` call
+	* version 0.4 to 0.5
+	* webpage index page is implemented
+
+2012-03-14  Labris Teknoloji  <info@labristeknoloji.com>
+
+	* whitelist has been implemented
+	* alert message reworked
+	* domainnames now `http://` and `www.` parts omitted
+	* domainnames now checked for duplicates
+
+2012-03-12  Labris Teknoloji  <info@labristeknoloji.com>
+
+	* version 0.3 to 0.4
+	* content/alertDialog.xul implemented.
+	* icons are all set
+
+2012-03-09  Labris Teknoloji  <info@labristeknoloji.com>
+
+	* version 0.2 to 0.3
+	* content/preferencesWindow.xul new tabbed preferences window
+	* tabs added new tabs settings-whitelist-about-license
+	* tabs /settings /about /license implemented
+
+2012-03-09  Labris Teknoloji  <info@labristeknoloji.com>
+
+	* version 0.1 to 0.2
+	* content/labrisDialog.xul has changed to preferences pane
+	* skin/ddos-aw-icon.png added extension icon
+
+2012-03-07  Labris Teknoloji  <info@labristeknoloji.com>
+
+	* version 0.1
+	* main mechanism is implemented
+	* extension skull is implemented. XUL development done.

@@ -1,0 +1,15 @@
+toolbarbutton.ddospreventer-toolbarbutton,
+window:not([active="true"]) toolbarbutton.ddospreventer-toolbarbutton {
+  list-style-image: url("chrome://ddospreventer-os/skin/toolbarbutton-16.png");
+} 
+
+#ddospreventer-button {
+  list-style-image: url("chrome://ddospreventer-os/skin/toolbarbutton-24.png");
+  -moz-image-region: rect(0px, 24px, 24px, 0px);
+}
+
+toolbar[iconsize="small"] #ddospreventer-button {
+  list-style-image: url("chrome://ddospreventer-os/skin/toolbarbutton-16.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+

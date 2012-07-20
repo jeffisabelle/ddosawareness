@@ -1,0 +1,10 @@
+content   ddospreventer                 content/
+skin 	  ddospreventer     classic/1.0 skin/all/
+skin 	  ddospreventer-os  classic/1.0 skin/unix/
+skin 	  ddospreventer-os  classic/1.0 skin/win/    os=WINNT
+skin 	  ddospreventer-os  classic/1.0 skin/mac/    os=Darwin
+locale    ddospreventer   en-US         locale/en-US/
+resource  ddospreventer                 modules/
+
+overlay chrome://browser/content/browser.xul  chrome://ddospreventer/content/browserOverlay.xul
+style chrome://global/content/customizeToolbar.xul chrome://ddospreventer-os/skin/toolbar.css
