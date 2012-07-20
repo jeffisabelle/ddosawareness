@@ -11,7 +11,7 @@ It is developed for ddosmitigator.com which is a Labris Teknoloji project.
 You can simply click below within firefox to install the extension to your browser;
 http://muhammetcan.net/labris/ddosawareness/ddosawareness.xpi
 
-You can get more information about the extension from here;
+You can get more information about the extension from here; 
 http://muhammetcan.net/labris/ddosawareness/
 
 ## screenshots
